@@ -1,0 +1,4 @@
+flask
+pypdf
+edge-tts
+waitress
