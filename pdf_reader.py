@@ -509,12 +509,7 @@ function resetAll(){
 """
 
 if __name__ == "__main__":
-    import webbrowser
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--port", default=5050, type=int)
-    args = parser.parse_args()
-    port = int(os.environ.get("PORT", args.port))
-    url = f"http://127.0.0.1:{port}"
-    print(f"\n📖 PDF Reader → {url}\n")
+    port = int(os.environ.get("PORT", 5050))
+    print(f"\n📖 PDF Reader → port {port}\n")
     from waitress import serve
     serve(app, host="0.0.0.0", port=port)
